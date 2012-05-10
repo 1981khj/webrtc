@@ -9,5 +9,5 @@ exports.index = function(req, res){
 
 
 exports.movie = function(req, res){
-  res.render('movie', { title: 'Movie' })
+  res.render('movie', { title: 'WebRtcSample1' })
 };

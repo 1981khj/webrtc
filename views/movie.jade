@@ -1,8 +1,8 @@
 h1= title
 p Welcome to #{title}
-div
-    video#sourcevid(width="640", autoplay="true")
-        source(src="/movies/BigBuckBunny_640x360.mp4")
-    canvas#sourcecopy(width="640", height="360")
+    div(style="display: none")
+        video#sourcevid(width="640", autoplay="true")
+            source(src="/movies/dizzy.mp4")
+        canvas#sourcecopy(width="640", height="360")
     canvas#output(width="1000", height="600", onmousedown="dropBomb(event, this)", style="border: solid 5px #666666")
 script(type='text/javascript', src='/javascripts/movie.js')
