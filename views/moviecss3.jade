@@ -1,0 +1,25 @@
+link(rel='stylesheet', href='/css/moviecss3.css')
+h1 GetUserMedia and CSS3 Animations, Transitions and 3D Transforms
+p Welcome to #{title}
+div
+    button(onclick="toggleBackfaces()") Toggle Shape
+div 
+    input#backfaces(type="checkbox", onclick="toggleBackfaces()")
+    label(for="backfaces") Backfaces visible
+div#container
+    div#stage
+        div#shape.cube.backfaces
+            div.plane.one 1
+            div.plane.two 2
+            div.plane.three 3
+            div.plane.four 4
+            div.plane.five 5
+            div.plane.six 6
+            div.plane.seven 7
+            div.plane.eight 8
+            div.plane.nine 9
+            div.plane.ten 10
+            div.plane.eleven 11
+            div.plane.twelve 12
+script(type='text/javascript', src='/javascripts/moviecss3.js')
+
