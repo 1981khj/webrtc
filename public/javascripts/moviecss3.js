@@ -55,3 +55,44 @@ function toggleBackfaces()
   else
     removeClassName(shape, 'backfaces');
 }
+
+$(document).ready(function() {    
+    var n = navigator,
+        is_webkit = false;
+
+    if (n.getUserMedia) {
+        // opera users (hopefully everyone else at some point)
+        n.getUserMedia({
+            video: true,
+            audio: true
+        }, onSuccess, onError);
+    }
+    else if (n.webkitGetUserMedia) {
+        // webkit users
+        is_webkit = true;
+        n.webkitGetUserMedia('video, audio', onSuccess, onError);
+    }
+    else {
+        // etc users
+    }
+    
+    function onSuccess(stream) {
+        var output = document.getElementsByTagName('video'),
+            source;
+
+        output.autoplay = true;
+
+        if (!is_webkit) {
+            source = stream;
+        }
+        else {
+            source = window.webkitURL.createObjectURL(stream);
+        }
+
+        output.src = source;
+    }
+
+    function onError() {        
+        console.log("Do nothing");
+    }
+});
