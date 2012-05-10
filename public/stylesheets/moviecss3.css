@@ -41,7 +41,7 @@
 }
 
 #shape {
-  -webkit-animation: spin 8s infinite linear;
+  -webkit-animation: spin 15s infinite linear;
 }
 
 @-webkit-keyframes spin {
