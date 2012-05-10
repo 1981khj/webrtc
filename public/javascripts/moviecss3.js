@@ -54,4 +54,4 @@ function toggleBackfaces()
     addClassName(shape, 'backfaces');
   else
     removeClassName(shape, 'backfaces');
-}​
+}
