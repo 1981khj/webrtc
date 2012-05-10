@@ -73,14 +73,14 @@ $(document).ready(function() {
         n.webkitGetUserMedia('video, audio', onSuccess, onError);
     }
     else {
-        // etc users
+        // etc user
     }
     
     function onSuccess(stream) {
         var output = document.getElementsByTagName('video'),
             source;
 
-        output.autoplay = true;
+        //output.autoplay = true;
 
         if (!is_webkit) {
             source = stream;
@@ -89,7 +89,9 @@ $(document).ready(function() {
             source = window.webkitURL.createObjectURL(stream);
         }
 
-        output.src = source;
+        for(var i in output){
+            output[i].src = source;
+        }
     }
 
     function onError() {        
