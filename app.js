@@ -30,6 +30,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+app.get('/movie', routes.movie);
 
 app.listen(process.env.PORT, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
