@@ -29,7 +29,10 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+app.get('/', function(req, res) {     
+    res.sendfile(__dirname + '/views/index.html');
+});
 app.get('/movie', routes.movie);
 app.get('/moviecss3', routes.moviecss3);
 
